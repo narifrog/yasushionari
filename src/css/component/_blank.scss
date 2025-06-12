@@ -1,0 +1,16 @@
+.c-blank{
+  padding-right: 26px;
+  position: relative;
+  &:after{
+    content: '';
+    width: 16px;
+    height: 16px;
+    background-image: url(../images/common/ic_blank_w.svg);
+    background-size: cover;
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+  }
+}

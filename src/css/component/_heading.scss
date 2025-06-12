@@ -1,0 +1,33 @@
+.heading{
+  font-size: 32px;
+  font-family: $nexus;
+  font-weight: 600;
+  text-align: center;
+  position: relative;
+  margin-bottom: 1em;
+  @include min-screen($break_point_pc) {
+    font-size: 40px;
+    margin-bottom: 1.25em;
+  }
+}
+
+.c-subheading{
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.6;
+  letter-spacing: 0;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 1em;
+  @include min-screen($break_point_pc) {
+    font-size: 20px;
+  }
+  &:before{
+    content: '';
+    width: 30px;
+    height: 1px;
+    background-color: $black;
+    display: block;
+  }
+}

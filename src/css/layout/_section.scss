@@ -1,0 +1,16 @@
+.l-section {
+  padding: $spacing5 0;
+
+  @include min-screen($break_point_middle) {
+    padding: $spacing8 0;
+  }
+}
+
+section{
+.inner{
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+}

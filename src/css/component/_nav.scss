@@ -1,0 +1,9 @@
+.nav{
+  &__list{
+    display: flex;
+    gap: 1em;
+  }
+  &__link{
+    font-family: $nexus;
+  }
+}

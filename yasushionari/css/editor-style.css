@@ -1,0 +1,120 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Urbanist:ital@0;1&display=swap');
+
+.editor-styles-wrapper{
+  font-family:"Noto Sans JP", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro",  "游ゴシック", "Yu Gothic", "游ゴシック体", "YuGothic", "Meiryo UI", "メイリオ", Meiryo, sans-serif;
+  background-color: #F2F4F8 !important;
+  color: #000;
+}
+
+.wp-block-post-content.wp-block-post-content{
+  max-width: 1024px;
+  width: 840px;
+  margin: 0 auto;
+}
+
+.wp-block{
+  /* max-width: 1024px; */
+}
+
+h1.wp-block-post-title{
+  font-size: 30px;
+  margin-bottom: 30px;
+  background-color: #FFF;
+  border: 1px dashed #e0e0e0;
+}
+
+h1{
+  font-weight: 600;
+  line-height: 1.4;
+  margin: 1em 0;
+  font-size: 36px;
+}
+h2{
+  font-size: 24px;
+  font-weight: 600;
+  position: relative;
+  margin:1em 0;
+}
+h3{
+  border-bottom: 1px solid #000000;
+  margin-bottom: 1em;
+  font-weight: 500;
+  font-size: 18px;
+}
+h4{
+  font-weight: 500;
+  margin-bottom: 1em;
+}
+
+p{
+  font-size: 16px;
+  margin-bottom: 1em;
+}
+p.has-large-font-size{
+  font-size: 20px;
+  font-weight: 600;
+}
+
+a{
+  color: #002D7B;
+}
+
+.wp-block-columns{
+  gap: 40px;
+  margin-top: 0;
+  margin-bottom:1.75em;
+}
+.wp-block-columns.flex-end{
+  align-items: flex-end;
+}
+
+.wp-block-column.has-background{
+  padding: 50px 30px;
+}
+
+.wp-block-column.has-background.has-white-color h3.wp-block-heading:before{
+  background-color: #FFF;
+}
+
+.wp-block-separator{
+  width: 40px;
+  border-top:1px solid rgba(0, 0, 0, 1);
+  margin: 45px 0 !important;
+  padding: 0;
+}
+
+.wp-block-spacer{
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+ol.wp-block-list,
+ul.wp-block-list{
+  margin-bottom: 1em;
+}
+
+ol.wp-block-list li{
+  counter-increment: cnt;
+  padding-left: 1.4em;
+  text-indent: -1.4em;
+}
+ol.wp-block-list li div:before{
+  content:counter(cnt) ". ";
+}
+
+ul.wp-block-list li{
+  padding-left: 1.1em;
+  text-indent: -1.1em;
+}
+ul.wp-block-list li div:before{
+  content:'・';
+}
+
+:root :where(.editor-styles-wrapper)::after{
+  height: 20vh !important;
+}
+
+.mce-content-body{
+ width: 798px;
+}

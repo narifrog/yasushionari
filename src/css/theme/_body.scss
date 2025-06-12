@@ -1,0 +1,30 @@
+/* ====================
+body settings
+=======================*/
+
+body {
+  font-family: $font_main;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: $font_spacing;
+  line-height: $font_line-height-sp;
+  color: $text1;
+  -webkit-font-smoothing: antialiased;
+  background-color: $background1;
+
+  @include min-screen($break_point_middle) {
+    line-height: $font_line-height-body;
+  }
+}
+
+// body {
+// 	position: relative;
+// 	font-size: 16px;
+// 	line-height: 1.7;
+// 	letter-spacing: 0.05em;
+// 	color: $black;
+// 	background-color: $beige;
+// 	@include min-screen($break_point_pc) {
+// 		font-size: 18px;
+// 	}
+// }

@@ -1,0 +1,9 @@
+.l-content {
+  width: 100%;
+  padding: 0 5.1%;
+  margin: 0 auto;
+  @include min-screen($break_point_pc) {
+    max-width: 1512px;
+    padding: 0;
+  }
+}

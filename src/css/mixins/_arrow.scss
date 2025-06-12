@@ -1,0 +1,14 @@
+@mixin arrow() {
+  &:after{
+    content: '';
+    width: 7px;
+    height: 14px;
+    display: block;
+    background-image: url(../images/common/ic_arrow_w.svg);  
+    background-size: cover;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}

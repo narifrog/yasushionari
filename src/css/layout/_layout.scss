@@ -1,0 +1,18 @@
+.l-wrapper {
+  // margin-top: $header_height_sp;
+  @include min-screen($break_point_middle) {
+    // margin-top: $header_height_pc;
+  }
+}
+.main{
+}
+.l-section__inner{
+  width: 100%;
+  padding: 0 6%;
+  margin: 0 auto;
+  @include min-screen($break_point_pc) {
+    width: calc(100% - 32px);
+    max-width: 850px;
+    padding: 0;
+  }
+}

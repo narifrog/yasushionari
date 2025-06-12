@@ -1,0 +1,27 @@
+.u-pc-hide {
+  @include min-screen($break_point_pc) {
+    display: none;
+  }
+}
+.u-sp-hide {
+  display: none;
+  @include min-screen($break_point_sp) {
+    display: inline;
+  }
+}
+
+.u-tablet-hide {
+  @include min-screen($break_point_768) {
+    display: none;
+  }
+}
+
+.u-d-i {
+  display: inline;
+}
+.u-d-ib {
+  display: inline-block;
+}
+.u-d-b {
+  display: block;
+}

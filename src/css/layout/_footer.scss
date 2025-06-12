@@ -1,0 +1,27 @@
+/*=========================
+footer
+==========================*/
+.footer {
+  width: 100%;
+  position: relative;
+  color: $white;
+  margin-top: 50px;
+  background: #212121;
+  border-top-left-radius: 15vw;
+  @include min-screen($break_point_1080) {
+    margin-top: 100px;
+  }
+
+  .inner{
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+}
+
+.copyright{
+  font-family: $nexus;
+  font-size: 11px;
+  text-align: right;
+}
