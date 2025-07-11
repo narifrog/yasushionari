@@ -1,18 +1,18 @@
 .heading{
-  font-size: 32px;
+  font-size: 3.2rem;
   font-family: $nexus;
   font-weight: 600;
   text-align: center;
   position: relative;
   margin-bottom: 1em;
-  @include min-screen($break_point_pc) {
-    font-size: 40px;
+  @include min-screen($break_point_560) {
+    font-size: 4rem;
     margin-bottom: 1.25em;
   }
 }
 
 .c-subheading{
-  font-size: 18px;
+  font-size: 1.8rem;
   font-weight: 700;
   line-height: 1.6;
   letter-spacing: 0;
@@ -20,8 +20,8 @@
   align-items: center;
   gap: 15px;
   margin-bottom: 1em;
-  @include min-screen($break_point_pc) {
-    font-size: 20px;
+  @include min-screen($break_point_560) {
+    font-size: 2.0rem;
   }
   &:before{
     content: '';

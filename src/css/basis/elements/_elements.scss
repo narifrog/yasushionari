@@ -1,4 +1,5 @@
 html {
+	font-size: var(--liquid-htmlroot);
 	box-sizing: border-box;
 	scroll-padding-top: $header_height_sp;
 	scroll-behavior: smooth;

@@ -1,0 +1,36 @@
+:root {
+  // デザインベースの幅（例：1440px の 1/10 = 144）
+  --liquid-lgDesignRatio: 144;
+  --liquid-mdDesignRatio: 75;
+  --liquid-smDesignRatio: 37.5;
+
+  // JavaScriptで innerWidth から上書き可能
+  --vw: 1vw;
+
+  // 1rem の基準サイズをデザイン比率で調整
+  --liquid-htmlroot: calc((var(--vw, 1vw) * 100) / var(--liquid-smDesignRatio));
+
+  @include min-screen($break_point_768) {
+    --liquid-htmlroot: calc((var(--vw, 1vw) * 100) / var(--liquid-mdDesignRatio));
+  }
+  @include min-screen($break_point_pc) {
+    --liquid-htmlroot: calc((var(--vw, 1vw) * 100) / var(--liquid-lgDesignRatio));
+  }
+  @include min-screen($break_point_1960) {
+    --liquid-htmlroot: calc((var(--vw, 1vw) * 75) / var(--liquid-lgDesignRatio));
+  }
+
+  --body-font-size: 1.4rem;
+
+  // 固定単位用（必要に応じて）
+  --solid-root: 16px;
+
+  // スペーシング
+  --space-xs: 0.8rem;
+  --space-sm: 1.2rem;
+  --space-md: 2rem;
+  --space-lg: 4rem;
+
+  // 高さ系
+  --header-height: 8rem;
+}

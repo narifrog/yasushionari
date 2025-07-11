@@ -5,5 +5,11 @@
   }
   &__link{
     font-family: $nexus;
+    @include min-screen($break_point_pc) {
+      font-size: 1.6rem;
+    }
+    @include min-screen($break_point_1440) {
+      font-size: 1.4rem;
+    }
   }
 }

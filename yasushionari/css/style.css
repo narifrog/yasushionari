@@ -376,6 +376,7 @@ th {
 }
 
 html {
+  font-size: var(--liquid-htmlroot);
   box-sizing: border-box;
   scroll-padding-top: 80px;
   scroll-behavior: smooth;
@@ -658,7 +659,7 @@ ul {
 }
 
 .heading {
-  font-size: 32px;
+  font-size: 3.2rem;
   font-family: "ff-nexus-sans",sans-serif;
   font-weight: 600;
   text-align: center;
@@ -667,7 +668,7 @@ ul {
 }
 
 .c-subheading {
-  font-size: 18px;
+  font-size: 1.8rem;
   font-weight: 700;
   line-height: 1.6;
   letter-spacing: 0;
@@ -727,17 +728,19 @@ ul {
   align-items: center;
   gap: 60px;
   font-family: "ff-nexus-sans",sans-serif;
-  font-size: 18px;
+  font-size: 1.6rem;
   letter-spacing: .2em;
   margin: 30px 0;
 }
 
 .pager__link {
-  font-size: 24px;
+  font-size: 2rem;
 }
 
 .pager__link a {
-  font-size: 24px;
+  font-size: 2rem;
+  display: block;
+  line-height: 1;
 }
 
 .pager__top {
@@ -746,13 +749,28 @@ ul {
 
 body {
   font-family: "source-han-sans-japanese","游ゴシック","Yu Gothic","游ゴシック体","YuGothic","Meiryo UI","メイリオ","ヒラギノ角ゴ ProN W3","HiraKakuProN-W3","ヒラギノ角ゴ Pro W3","HiraKakuPro-W3",sans-serif;
-  font-size: 14px;
+  font-size: var(--body-font-size);
   font-weight: 400;
   letter-spacing: .05em;
   line-height: 1.6;
   color: #0a0a0a;
   -webkit-font-smoothing: antialiased;
   background-color: #f5f5f5;
+}
+
+:root {
+  --liquid-lgDesignRatio: 144;
+  --liquid-mdDesignRatio: 75;
+  --liquid-smDesignRatio: 37.5;
+  --vw: 1vw;
+  --liquid-htmlroot: calc((var(--vw, 1vw) * 100) / var(--liquid-smDesignRatio));
+  --body-font-size: 1.4rem;
+  --solid-root: 16px;
+  --space-xs: 0.8rem;
+  --space-sm: 1.2rem;
+  --space-md: 2rem;
+  --space-lg: 4rem;
+  --header-height: 8rem;
 }
 
 .l-content {
@@ -779,7 +797,7 @@ body {
 
 .copyright {
   font-family: "ff-nexus-sans",sans-serif;
-  font-size: 11px;
+  font-size: 1.1rem;
   text-align: right;
 }
 
@@ -803,7 +821,7 @@ body {
 
 .header__logo {
   font-family: "ff-nexus-sans",sans-serif;
-  font-size: 20px;
+  font-size: 2rem;
   font-weight: 600;
   line-height: 1;
 }
@@ -863,7 +881,7 @@ section .inner {
 }
 
 .home .header__logo {
-  font-size: 70px;
+  font-size: 7rem;
   text-align: center;
   font-weight: 600;
   line-height: 1;
@@ -892,7 +910,7 @@ section .inner {
 
 .home .nav__link {
   font-family: "ff-nexus-sans",sans-serif;
-  font-size: 22px;
+  font-size: 2.2rem;
   font-weight: 600;
   color: #fff;
 }
@@ -959,7 +977,7 @@ section .inner {
 }
 
 .home .service-section__heading {
-  font-size: 18px;
+  font-size: 1.8rem;
   font-weight: 500;
   text-align: center;
 }
@@ -967,7 +985,7 @@ section .inner {
 .home .service-section__heading--en {
   font-family: "ff-nexus-sans",sans-serif;
   display: block;
-  font-size: 14px;
+  font-size: 1.4rem;
 }
 
 .home .service-section__icon {
@@ -983,7 +1001,7 @@ section .inner {
 }
 
 .home .about-section__name {
-  font-size: 18px;
+  font-size: 1.8rem;
   font-weight: 600;
   line-height: 1;
   margin-bottom: 1em;
@@ -995,7 +1013,7 @@ section .inner {
 
 .home .about-section__skill {
   padding-bottom: .5em;
-  font-size: 16px;
+  font-size: 1.6rem;
 }
 
 .home .about-section__skill i {
@@ -1054,7 +1072,7 @@ section .inner {
 .home .article__ttl {
   width: 100%;
   font-family: "ff-nexus-sans",sans-serif;
-  font-size: 18px;
+  font-size: 1.8rem;
   font-weight: 600;
   color: #222;
   opacity: 0;
@@ -1101,7 +1119,7 @@ section .inner {
 }
 
 .single-work__ttl {
-  font-size: 18px;
+  font-size: 1.8rem;
   font-weight: 700;
   margin-bottom: 1em;
 }
@@ -1433,9 +1451,36 @@ section .inner {
   margin-top: 96px;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 560px) {
+  .heading {
+    font-size: 4rem;
+    margin-bottom: 1.25em;
+  }
+
+  .c-subheading {
+    font-size: 2rem;
+  }
+
   .pager {
     margin: 60px 0;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .pager {
+    font-size: 1.8rem;
+  }
+
+  .pager__link {
+    font-size: 2.4rem;
+  }
+
+  .pager__link a {
+    font-size: 2.4rem;
+  }
+
+  :root {
+    --liquid-htmlroot: calc((var(--vw, 1vw) * 100) / var(--liquid-mdDesignRatio));
   }
 
   .header>.inner {
@@ -1444,15 +1489,13 @@ section .inner {
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
     flex-direction: row;
-  }
-
-  .home .header__logo {
-    font-size: 100px;
-    text-align: left;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
   }
 
   .home .nav__link {
-    font-size: 36px;
+    font-size: 3.6rem;
   }
 
   .home .footer {
@@ -1475,11 +1518,11 @@ section .inner {
   }
 
   .home .service-section__heading {
-    font-size: 20px;
+    font-size: 2rem;
   }
 
   .home .service-section__heading--en {
-    font-size: 14px;
+    font-size: 1.4rem;
   }
 
   .home .about-section {
@@ -1507,7 +1550,7 @@ section .inner {
   }
 
   .single-work__ttl {
-    font-size: 20px;
+    font-size: 2rem;
   }
 
   .u-tablet-hide {
@@ -1515,18 +1558,17 @@ section .inner {
   }
 }
 
-@media screen and (min-width: 820px) {
+@media screen and (min-width: 960px) {
   html {
     scroll-padding-top: 116px;
   }
 
-  .heading {
-    font-size: 40px;
-    margin-bottom: 1.25em;
+  .nav__link {
+    font-size: 1.6rem;
   }
 
-  .c-subheading {
-    font-size: 20px;
+  :root {
+    --liquid-htmlroot: calc((var(--vw, 1vw) * 100) / var(--liquid-lgDesignRatio));
   }
 
   .l-content {
@@ -1534,10 +1576,19 @@ section .inner {
     padding: 0;
   }
 
+  .header__logo {
+    font-size: 3rem;
+  }
+
   .l-section__inner {
     width: calc(100% - 32px);
     max-width: 850px;
     padding: 0;
+  }
+
+  .home .header__logo {
+    font-size: 10rem;
+    text-align: left;
   }
 
   .u-pc-hide {
@@ -1650,11 +1701,11 @@ section .inner {
   }
 
   .home .service-section__heading {
-    font-size: 24px;
+    font-size: 2.4rem;
   }
 
   .home .service-section__heading--en {
-    font-size: 16px;
+    font-size: 1.6rem;
   }
 
   .home .about-section {
@@ -1709,5 +1760,21 @@ section .inner {
   .single-work__content {
     width: 65%;
     padding-left: 40px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .nav__link {
+    font-size: 1.4rem;
+  }
+
+  .header__logo {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (min-width: 1960px) {
+  :root {
+    --liquid-htmlroot: calc((var(--vw, 1vw) * 75) / var(--liquid-lgDesignRatio));
   }
 }

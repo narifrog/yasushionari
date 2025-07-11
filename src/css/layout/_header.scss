@@ -16,13 +16,20 @@ common header
       gap: 25px;
       padding: 25px;
       flex-direction: row;
+      align-items: center;
     }
   }
   &__logo{
     font-family: $nexus;
-    font-size: 20px;
+    font-size: 2rem;
     font-weight: 600;
     line-height: 1;
+    @include min-screen($break_point_pc) {
+      font-size: 3rem;
+    }
+    @include min-screen($break_point_1440) {
+      font-size: 2rem;
+    }
   }
   
   &__ttl{
